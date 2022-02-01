@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia interactiva</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="libro.png" />
+</head>
+<body class="background-black">
+
+    <div class="start-button">
+        <img src="play_btn.png" alt="Iniciar video">
+    </div>
+    <section id="video">
+        <video src="prueba video.mp4"></video>
+    </section>
+    <section id="select-option" class="transparent">
+        <h2>¿Qué debería hacer?</h2>
+        <div class="options">
+            <figure class="option1">
+                <div class="option1-border"></div>
+                <p>*Inserta opción 1*</p>
+            </figure>
+            <figure class="option2">
+                <p>*Inserta opción 2*</p>
+                <div class="option2-border"></div>
+            </figure>
+        </div>
+        <div class="information">
+            <p>!</p>
+        </div>
+        <div class="information-question transparent"></div>
+    </section>
+
+    <script src="script_historia.js" type="module"></script>
+</body>
+</html>

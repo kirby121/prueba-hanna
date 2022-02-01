@@ -7,16 +7,32 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-html{
+body{
     background-color: whitesmoke;
+}
+
+.background-black{
+    background-color: black;
 }
 
 :root{
     --grey: rgb(77, 77, 77);
+    --pastel-blue: #a2a4fd;
+    --pastel-red: #ff9494;
 }
 
 .none{
     display: none
+}
+
+.transparent{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.visible{
+    opacity: 1;
+    visibility: visible;
 }
 
 /*Nav*/
@@ -25,13 +41,13 @@ nav{
     position: fixed;
     width: 96vw;
     margin-left: 2vw;
-    top: 2rem;
+    top: 1.5rem;
     display: flex;
     justify-content: space-around;
 }
 
 nav p{
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 600;
     cursor: pointer;
     transition: .5s;
@@ -66,7 +82,7 @@ nav p:hover{
 }
 
 .group1{
-    height: 25%;
+    height: 30%;
     width: 100%;
     display: flex;
     padding-top: 1vh;
@@ -109,7 +125,7 @@ nav p:hover{
 
 .square2-variation{
     width: 100%;
-    height: 40%;
+    height: 35vw;
     background-color: #e0e0e0;
     margin-top: 1vh;
     border-radius: 1rem;
@@ -123,7 +139,7 @@ nav p:hover{
 }
 
 .square4-variation{
-    width: calc(40% - 1vh);
+    width: calc(35vw - 1vh);
     height: 100%;
     background-color: #727272;
 }
@@ -131,13 +147,14 @@ nav p:hover{
 /*Content*/
 
 h1{
-    margin-top: 1rem;
-    font-size: 10vw;
+    font-size: 1.8rem;
     text-align: center;
+    margin: 0 1rem;
+    margin-top: 1rem;
 }
 
 #content p{
-    font-size: 7.5vw;
+    font-size: 1.3rem;
     margin: 0 1rem;
     text-align: center;
     font-weight: 600;
@@ -145,7 +162,8 @@ h1{
     color: var(--grey);
 }
 
-button{
+#content button,
+#other-content button{
     width: 90vw;
     background-color: black;
     color: whitesmoke;
@@ -153,27 +171,30 @@ button{
     bottom: 1rem;
     left: 5vw;
     border-radius: 1rem;
-    height: 3.5rem;
-    font-size: 2rem;
+    height: 3rem;
+    font-size: 1.5rem;
     font-weight: 600;
     cursor: pointer;
     border: .2rem solid #000000;
     transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
-button:hover{
+#content button:hover,
+#other-content button:hover{
     color: black !important;
 	background-color: transparent;
 	text-shadow: nthree;
 }
 
-button:hover::before{
+#content button:hover::before,
+#other-content button:hover::before{
     left: 0%;
 	right: auto;
 	width: 100%;
 }
 
-button::before{
+#content button::before,
+#other-content button::before{
     display: block;
 	position: absolute;
 	top: 0px;
@@ -199,11 +220,11 @@ button::before{
 
 input{
     width: 70vw;
-    padding: .5rem 2rem;
-    border: rgb(150, 150, 150) solid .5rem;
+    padding: .5rem 1rem;
+    border: rgb(150, 150, 150) solid .4rem;
     border-radius: 1rem;
     outline: none;
-    font-size: 3rem;
+    font-size: 1.8rem;
     text-align: center;
     font-family: sans-serif;
     font-weight: 600;
@@ -212,15 +233,208 @@ input{
 }
 
 input:focus{
-    border: solid black .5rem;
+    border: solid black .4rem;
 }
 
+
+/*------------------------*/
+/*Historia*/
+/*------------------------*/
+
+/*button*/
+
+.start-button{
+    position: fixed;
+    z-index: 50;
+    width: 10rem;
+    height: 10rem;
+    top: calc(50vh - 5rem);
+    left: calc(50vw - 5rem);
+    border-radius: 50%;
+    background-color: var(--pastel-red);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.start-button img{
+    width: 40%;
+    margin-left: 5%;
+}
+
+.start-button:hover{
+    background-color: var(--pastel-blue);
+}
+
+/*video*/
+
+#video{
+    width: 100vw;
+    height: 100vh;
+    transition: .5s;
+    background-color: black;
+}
+
+#video video{
+    width: 100vw;
+    height: 100vh;
+}
+
+/*Opciones*/
+
+#select-option{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+#select-option h2{
+    font-size: 2.5rem;
+    color: whitesmoke;
+    font-weight: 600;
+    padding: 5vh 10vw;
+    text-align: center;
+}
+
+.options{
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.option1,
+.option2{
+    width: 100%;
+    height: 20vh;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 15;
+}
+
+.option1{
+    border-radius: 2.5rem 0 0 2.5rem;
+    display: flex;
+    justify-content: left;
+}
+.option2{
+    border-radius: 0 2.5rem 2.5rem 0;
+    display: flex;
+    justify-content: right;
+}
+
+.option1-border,
+.option2-border{
+    height: 20vh;
+    width: 15vw;
+    transition: .5s;
+    position: fixed;
+    z-index: 20;
+}
+
+.option1-border{
+    background-color: var(--pastel-blue);
+    border-radius: 2.5rem 0 0 2.5rem;
+}
+
+.option2-border{
+    background-color: var(--pastel-red);
+    border-radius: 0 2.5rem 2.5rem 0;
+}
+
+.option-border-hover{
+    width: 100vw;
+}
+
+.option1 p,
+.option2 p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    z-index: 21;
+}
+
+.option1 p{
+    margin-left: 15vw;
+    width: 85vw;
+    text-align: center;
+}
+
+.option2 p{
+    margin-right: 15vw;
+    width: 85vw;
+    text-align: center;
+}
+
+/*Informacion*/
+
+.information{
+    width: 4rem;
+    height: 4rem;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 5vh;
+    margin-left: calc(50vw - 2.5rem);
+    border: .2rem whitesmoke solid;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.information:hover{
+    background-color: black;
+    color: whitesmoke;
+}
+
+.information p{
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.information-question{
+    width: 80vw;
+    min-height: 15vh;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    position: fixed;
+    bottom: 20vh;
+    left: 10vw;
+    z-index: 22;
+    border: black solid .2rem;
+    transition: .5s;
+}
+
+.information-question::after {
+    border-top: 1rem solid whitesmoke;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    width: 0;
+    height: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: calc(40vw - 1.5rem);
+  }
+
+/*------------------------*/
 /*Responsive*/
+/*------------------------*/
+
 
 @media (min-width: 1200px){
     #squares{
         height: 98vh;
         width: calc(50vw - 2vh);
+        background-color: whitesmoke;
     }
 
     #content{
@@ -240,11 +454,19 @@ input:focus{
         margin-top: 2rem;
     }
 
-    button{
+    nav p{
+        font-size: 2rem;
+    }
+
+    #content button,
+    #other-content button{
         width: 15rem;
         position: fixed;
         top: 79vh;
-        left: 66vw;
+        left: 66.5vw;
+        font-size: 2rem;
+        padding: .5rem 2rem;
+        height: 4rem;
     }
 
     nav{
@@ -259,6 +481,7 @@ input:focus{
 
     input{
         width: 60%;
+        font-size: 2.5rem;
     }
 
     .code-input{
@@ -267,5 +490,78 @@ input:focus{
         right: 0;
         top: 5.5rem;
         height: calc(100vh - 10rem);
+    }
+
+    /*------------------------*/
+    /*Historia*/
+    /*------------------------*/
+
+    .start-button{
+        width: 15rem;
+        height: 15rem;
+        top: calc(50vh - 7.5rem);
+        left: calc(50vw - 7.5rem);
+    }
+
+    #select-option{
+        display: flex;
+        flex-direction:column;
+    }
+    
+    #select-option h2{
+        font-size: 4rem;
+        height: 15vh;
+        padding: 5vh 0;
+    }
+    
+    .options{
+        flex-direction: row;
+    }
+    
+    .option1,
+    .option2{
+        width: 35vw;
+        height: 60vh;
+        border-radius: 2.5rem;
+        display: flex;
+    }
+    
+    .option1-border,
+    .option2-border{
+        height: 15vh;
+        width: 35vw;
+        top: 25vh;
+        border-radius: 2.5rem 2.5rem 0 0;
+    }
+    
+    .option-border-hover{
+        height: 60vh;
+        border-radius: 2.5rem;
+    }
+    
+    .option1 p,
+    .option2 p{
+        font-size: 2rem;
+    }
+    
+    .option1 p{
+        width: 85vw;
+        margin-left: 0;
+    }
+    
+    .option2 p{
+        width: 35vw;
+        margin-right: 0;
+    }
+    
+    /*Informacion*/
+    
+    .information{
+        bottom: calc(45vh - 2.5rem);
+        margin-left: calc(50vw - 2.5rem);
+    }
+
+    .information-question{
+        bottom: 54vh;
     }
 }
