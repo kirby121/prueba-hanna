@@ -5,5 +5,5 @@ const d = document
 
 d.addEventListener("DOMContentLoaded", e => {
     cambiarPestaña("nav p", "#content", "#other-content")
-    redirectButton("#content button", "historia.html")
+    redirectButton("#content button", "https://kirby121.github.io/prueba-hanna/historia.html")
 })
