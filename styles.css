@@ -26,8 +26,26 @@ body{
 }
 
 .transparent{
-    visibility: hidden;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 300vw;
+}
+
+.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.dark-screen{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
     opacity: 0;
+    visibility: hidden;
+    transition: .5s;
 }
 
 .visible{
@@ -242,6 +260,7 @@ input:focus{
 /*------------------------*/
 
 /*button*/
+/*
 
 .start-button{
     position: fixed;
@@ -267,9 +286,9 @@ input:focus{
 .start-button:hover{
     background-color: var(--pastel-blue);
 }
-
+*/
 /*video*/
-
+/*
 #video{
     width: 100vw;
     height: 100vh;
@@ -281,9 +300,9 @@ input:focus{
     width: 100vw;
     height: 100vh;
 }
-
+*/
 /*Opciones*/
-
+/*
 #select-option{
     position: fixed;
     width: 100vw;
@@ -370,9 +389,10 @@ input:focus{
     width: 85vw;
     text-align: center;
 }
+*/
 
 /*Informacion*/
-
+/*
 .information{
     width: 4rem;
     height: 4rem;
@@ -424,7 +444,7 @@ input:focus{
     top: 100%;
     left: calc(40vw - 1.5rem);
   }
-
+*/
 /*------------------------*/
 /*Responsive*/
 /*------------------------*/
@@ -495,7 +515,7 @@ input:focus{
     /*------------------------*/
     /*Historia*/
     /*------------------------*/
-
+/*
     .start-button{
         width: 15rem;
         height: 15rem;
@@ -553,9 +573,9 @@ input:focus{
         width: 35vw;
         margin-right: 0;
     }
-    
+    */
     /*Informacion*/
-    
+    /*
     .information{
         bottom: calc(45vh - 2.5rem);
         margin-left: calc(50vw - 2.5rem);
@@ -563,5 +583,5 @@ input:focus{
 
     .information-question{
         bottom: 54vh;
-    }
+    }*/
 }

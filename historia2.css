@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+}
+
+:root{
+    --red: rgb(255, 176, 176);
+    --blue: rgb(176, 204, 255);
+    --yellow: rgb(254, 255, 203);
+    --green: rgb(207, 255, 203);
+    --brown: rgb(197, 192, 219);
+    --dark-blue: rgb(219, 204, 192);
+}
+
+body{
+    overflow: hidden;
+}
+
+.hidden{
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+
+/*colores*/
+
+.brown{
+ background-color: var(--brown);   
+}
+.blue{
+ background-color: var(--blue);   
+}
+.green{
+ background-color: var(--green);   
+}
+.yellow{
+ background-color: var(--yellow);   
+}
+.red{
+ background-color: var(--red);   
+}
+.dark-blue{
+ background-color: var(--dark-blue);   
+}
+
+/*Botón de iniciar*/
+
+.start{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: black;
+}
+
+.start-animation-off{
+    width: 0 !important;
+    transition: .5s;
+}
+
+.left,.right{
+    width: 50vw;
+    height: 100vh;
+    transition: .7s;
+    position: absolute;
+}
+
+.left{
+    left: 0;
+}
+
+.right{
+    right: 0;
+}
+
+.left figure, .right figure{
+    width: 99%;
+    height: 23.7vh;
+    margin: 1vh 0;
+}
+
+.left figure{
+    border-radius: 0 3rem 3rem 0;
+}
+.right figure{
+    border-radius: 3rem 0 0 3rem;
+    margin-left: 1%;
+}
+
+.start-btn{
+    height: 75vh;
+    width: 80vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 10vw;
+    border-radius: 0 0 3rem 3rem;
+    transition: .5s;
+}
+
+.start-btn p{
+    color: whitesmoke;
+    font-size: 2rem;
+    padding: 2rem;
+    font-family: "raleway", sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+.start-btn-animation-off{
+    height: 0;
+    opacity: 0;
+}
+
+.start-btn button
+{
+    width: 80%;
+    background-color: black;
+    color: whitesmoke;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: .2rem solid #000000;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.start-btn button:hover{
+    color: black !important;
+	background-color: rgba(245, 245, 245, 0.795);
+}
+
+/*Responsive*/
+
+@media (min-width: 1200px){
+
+    .start-btn{
+        height: 75vh;
+        width: 30vw;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 35vw;
+        border-radius: 0 0 3rem 3rem;
+        transition: .5s;
+    }
+}
