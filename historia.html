@@ -5,35 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historia interactiva</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="libro.png" />
+    <link rel="stylesheet" href="historia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="background-black">
+<body>
 
-    <div class="start-button">
-        <img src="play_btn.png" alt="Iniciar video">
-    </div>
-    <section id="video">
+    <div class="video-div">
         <video src="prueba video.mp4"></video>
-    </section>
-    <section id="select-option" class="transparent">
-        <h2>¿Qué debería hacer?</h2>
-        <div class="options">
-            <figure class="option1">
-                <div class="option1-border"></div>
-                <p>*Inserta opción 1*</p>
-            </figure>
-            <figure class="option2">
-                <p>*Inserta opción 2*</p>
-                <div class="option2-border"></div>
-            </figure>
+    </div>
+
+    <section class="start">
+        <div class="figures left start-animation-off">
+            <figure class="blue"></figure>
+            <figure class="yellow"></figure>
+            <figure class="green"></figure>
+            <figure class="red"></figure>
         </div>
-        <div class="information">
-            <p>!</p>
+        <div class="figures right start-animation-off">
+            <figure class="red"></figure>
+            <figure class="brown"></figure>
+            <figure class="dark-blue"></figure>
+            <figure class="yellow"></figure>
         </div>
-        <div class="information-question transparent"></div>
+        <div class="start-btn start-btn-animation-off">
+            <p>Hice ésta historia con mucho amor, y espero que la disfrutes de la misma manera que yo disfruté hacerla</p>
+            <button id="start">Comenzar</button>
+        </div>
     </section>
 
-    <script src="script_historia.js" type="module"></script>
+
+    <script src="historia_script.js" type="module"></script>
 </body>
 </html>

@@ -6,12 +6,11 @@ export function redirectButton(btn, link, darkScreen) {
 
     
     $btn.addEventListener("click", e => {
-
+        $darkScreen.classList.remove("inactive")
         $darkScreen.classList.add("active")
-
-        /*setTimeout(() => {
+        setTimeout(() => {
             location.href = link
-        }, 1000);*/
+        }, 1000);
     })
 }
 
@@ -26,5 +25,18 @@ export function startStory(btn, figures, figuresClass, panel, panelClass) {
 
         $figures.forEach(element => element.classList.toggle(figuresClass));
         $panel.classList.add(panelClass)
+    })
+}
+
+export function startVideos(video, videoClass, btn, source) {
+    const $video = d.querySelector(video),
+    $btn = d.querySelector(btn)
+
+    $btn.addEventListener("click", e => {
+        $video.classList.add(videoClass)
+        $video.setAttribute("src", source)
+        setTimeout(() => {
+            $video.play()
+        }, 1000);
     })
 }

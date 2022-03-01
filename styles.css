@@ -29,11 +29,17 @@ body{
     visibility: hidden !important;
     opacity: 0 !important;
     width: 300vw;
+    background-color: red;
 }
 
 .active{
-    opacity: 1 !important;
-    visibility: visible !important;
+    opacity: 1;
+    visibility: visible;
+}
+
+.inactive{
+    opacity: 0;
+    visibility: hidden;
 }
 
 .dark-screen{
@@ -43,8 +49,6 @@ body{
     right: 0;
     left: 0;
     background-color: black;
-    opacity: 0;
-    visibility: hidden;
     transition: .5s;
 }
 
